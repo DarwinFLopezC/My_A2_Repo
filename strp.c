@@ -72,11 +72,11 @@ size_t Str_compare(const char *s1, const char *s2)
         pcEnd1++;
         pcEnd2++;
     }
-    if (pcEnd1 < pcEnd2) 
+    if (*pcEnd1 < *pcEnd2) 
     {
         return -1;
     }
-    else if (pcEnd1 > pcEnd2)
+    else if (*pcEnd1 > *pcEnd2)
     {
         return 1;
     }
