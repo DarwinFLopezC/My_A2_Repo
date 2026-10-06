@@ -1,6 +1,7 @@
 #ifndef STR_INCLUDED
 #define STR_INCLUDED
 
+#include <stddef.h>
 /* Takes an array of characters (a string) 
 and returns the length of that string */
 size_t Str_getLength(const char *s);
