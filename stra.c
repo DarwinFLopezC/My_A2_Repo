@@ -86,7 +86,7 @@ char *Str_search(const char str1[], const char str2[])
         {
             return (char *)&(str1[strIndex - Str_getLength(str2)]);
         }
-        if (str1[strIndex] == str2[substringIndex] && inSubstring == 0)
+        else if (str1[strIndex] == str2[substringIndex] && inSubstring == 0)
         {
             inSubstring = 1;
             substringIndex++;
