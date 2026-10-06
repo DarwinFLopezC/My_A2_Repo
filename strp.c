@@ -96,7 +96,7 @@ char *Str_search(const char *s1, const char *s2)
     s2Tracker = s2;
     while (*pcEnd1 != '\0')
     {
-        if (inSubstring == 1 && s2Tracker - s2 == Str_getLength(s2))
+        if (inSubstring == 1 && (size_t)(s2Tracker - s2) == Str_getLength(s2))
         {
             return pcEnd1 - Str_getLength(s2);
         }
