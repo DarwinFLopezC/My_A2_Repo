@@ -1,3 +1,9 @@
+/*--------------------------------------------------------------------*/
+/* strp.c                                                             */
+/* Author: Darwin Lopez Campos                                        */
+/*--------------------------------------------------------------------*/
+
+
 #include "str.h"
 #include <assert.h>
 
@@ -85,7 +91,7 @@ int Str_compare(const char *s1, const char *s2)
 
 char *Str_search(const char *s1, const char *s2)
 {
-    char *p = NULL;
+    char *nullpointer = NULL;
     char *pcEnd1;
     const char *s2Tracker;
     
@@ -108,5 +114,5 @@ char *Str_search(const char *s1, const char *s2)
     if (*s2 == '\0' && Str_getLength(s1) == 0) {
         return s1;
     }
-    return p;
+    return nullpointer;
 }
