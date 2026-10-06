@@ -89,7 +89,7 @@ char *Str_search(const char str1[], const char str2[])
         }
         if (str2[substringIndex] == '\0') 
         {
-            return (char *)&(str1[strIndex - Str_getLength(str2)]);
+            return (char *)&(str1[strIndex]);
         }
 
         strIndex++;
