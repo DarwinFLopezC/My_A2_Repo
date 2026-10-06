@@ -79,7 +79,7 @@ char *Str_search(const char str1[], const char str2[])
 
     assert(str1 != NULL);
     assert(str2 != NULL);
-    while (strIndex != Str_getLength(str1)-Str_getLength(str2))
+    while (strIndex <= Str_getLength(str1)-Str_getLength(str2))
     {
         size_t substringIndex = 0;
 
