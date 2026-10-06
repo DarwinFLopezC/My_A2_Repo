@@ -38,6 +38,7 @@ char *Str_concat(char str1[], const char str2[])
         str1[strIndex + tsl1] = str2[strIndex];
         strIndex++;
     }
+    str1[strIndex] = '\0';
     return str1;
 }
 
