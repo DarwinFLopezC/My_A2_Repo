@@ -94,5 +94,8 @@ char *Str_search(const char str1[], const char str2[])
 
         strIndex++;
     }
+    if (*str2 == '\0' && strIndex == 0) {
+        return (char *)&(str1[strIndex]);
+    }
     return p;
 }
