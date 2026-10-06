@@ -7,14 +7,14 @@
 #include "str.h"
 #include <assert.h>
 
-size_t Str_getLength(const char *str)
+size_t Str_getLength(const char *s)
 {
    const char *pcEnd;
-   assert(str != NULL);
-   pcEnd = str;
+   assert(s != NULL);
+   pcEnd = s;
    while (*pcEnd != '\0')
       pcEnd++;
-   return (size_t)(pcEnd - str);
+   return (size_t)(pcEnd - s);
 }
 
 char *Str_copy(char *s1, const char *s2)
