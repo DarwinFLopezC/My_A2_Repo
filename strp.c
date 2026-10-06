@@ -85,9 +85,9 @@ size_t Str_compare(const char *s1, const char *s2)
 
 char *Str_search(const char *s1, const char *s2)
 {
-    const char *pcEnd1;
+    char *pcEnd1;
     const char *s2Tracker;
-    const char *p = NULL;
+    char *p = NULL;
     size_t inSubstring = 0;
 
     assert(s1 != NULL);
