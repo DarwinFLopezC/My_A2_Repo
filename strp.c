@@ -101,7 +101,7 @@ char *Str_search(const char *s1, const char *s2)
         }
         if (*s2Tracker == '\0') 
         {
-            return pcEnd1;
+            return pcEnd1-(s2Tracker-s2);
         }
         pcEnd1++;
     }
