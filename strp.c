@@ -105,5 +105,8 @@ char *Str_search(const char *s1, const char *s2)
         }
         pcEnd1++;
     }
+    if (*s2 == '\0' && Str_getLength(s1) == 0) {
+        return s1;
+    }
     return p;
 }
