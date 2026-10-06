@@ -83,7 +83,7 @@ char *Str_search(const char str1[], const char str2[])
     {
         size_t substringIndex = 0;
 
-        while (str2[substringIndex] != '\0' && str2[substringIndex] == str2[strIndex+substringIndex])
+        while (str2[substringIndex] != '\0' && str2[substringIndex] == str1[strIndex+substringIndex])
         {
             substringIndex++;
         }
