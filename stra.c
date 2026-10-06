@@ -99,6 +99,11 @@ char *Str_search(const char str1[], const char str2[])
         {
             inSubstring = 0;
             substringIndex = 0;
+            if (str1[strIndex] == str2[substringIndex] && inSubstring == 0)
+            {
+                inSubstring = 1;
+                substringIndex++;
+            }
         }
         strIndex++;
     }
