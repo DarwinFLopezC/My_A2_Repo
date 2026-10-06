@@ -95,7 +95,7 @@ char *Str_search(const char *s1, const char *s2)
     while (*pcEnd1 != '\0')
     {
         s2Tracker = s2;
-        while (*s2Tracker != '\0' && *s2Tracker == *(pcEnd1 + (size_t)(s2Tracker - s2)))
+        while (*s2Tracker != '\0' && *s2Tracker == *(pcEnd1 + (s2Tracker - s2)))
         {
             s2Tracker++;
         }
