@@ -20,14 +20,13 @@
 static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
+   char *finder;
+   const char *pcEnd;
+   size_t timesFound = 0;
+   
    assert(pcLine != NULL);
    assert(pcFrom != NULL);
    assert(pcTo != NULL);
-
-   char *finder;
-   char *pcEnd;
-   size_t timesFound = 0;
-
    pcEnd = pcLine;
    if (*pcFrom == '\0') 
    {
