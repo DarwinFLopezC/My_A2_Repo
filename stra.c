@@ -73,8 +73,8 @@ size_t Str_compare(const char str1[], const char str2[])
 char *Str_search(const char str1[], const char str2[])
 {
     size_t strIndex = 0;
-    int inSubstring = 0;
-    int substringIndex = 0;
+    size_t inSubstring = 0;
+    size_t substringIndex = 0;
     char *p = NULL;
 
     assert(str1 != NULL);
@@ -83,7 +83,7 @@ char *Str_search(const char str1[], const char str2[])
     {
         if (inSubstring == 1 && substringIndex == Str_getLength(str2)) 
         {
-            return str1 + strIndex - Str_getLength(str2);
+            return &(str1[strIndex - Str_getLength(str2)]);
         }
         if (str1[strIndex] == str2[substringIndex] && inSubstring == 0)
         {
