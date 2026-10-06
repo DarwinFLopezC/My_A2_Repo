@@ -98,6 +98,7 @@ char *Str_search(const char str1[], const char str2[])
         else
         {
             inSubstring = 0;
+            substringIndex = 0;
         }
         strIndex++;
     }
