@@ -18,7 +18,7 @@ char *Str_concat(char *s1, const char *s2);
 either is greater or they're equal. Returns 0 if
 equal, a value < 0 if s1 < s2, or a value > 0 if 
 s1 > s2 */
-size_t Str_compare(const char *s1, const char *s2);
+int Str_compare(const char *s1, const char *s2);
 
 /* Takes two strings and searches s1 for a match 
 with s2. Returns a pointer to the first occurence

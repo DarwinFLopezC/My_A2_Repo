@@ -50,7 +50,7 @@ char *Str_concat(char *s1, const char *s2)
     return s1;
 }
 
-size_t Str_compare(const char *s1, const char *s2)
+int Str_compare(const char *s1, const char *s2)
 {
     const char *pcEnd1;
     const char *pcEnd2;

@@ -42,7 +42,7 @@ char *Str_concat(char str1[], const char str2[])
     return str1;
 }
 
-size_t Str_compare(const char str1[], const char str2[])
+int Str_compare(const char str1[], const char str2[])
 {
     size_t strIndex = 0;
     
