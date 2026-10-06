@@ -85,34 +85,23 @@ size_t Str_compare(const char *s1, const char *s2)
 
 char *Str_search(const char *s1, const char *s2)
 {
+    char *p = NULL;
     char *pcEnd1;
     const char *s2Tracker;
-    char *p = NULL;
-    size_t inSubstring = 0;
-
+    
     assert(s1 != NULL);
-    assert(s2 != NULL);    
+    assert(s2 != NULL);
     pcEnd1 = s1;
-    s2Tracker = s2;
     while (*pcEnd1 != '\0')
     {
-        if (inSubstring == 1 && (size_t)(s2Tracker - s2) == Str_getLength(s2))
-        {
-            return pcEnd1 - Str_getLength(s2);
-        }
-        if (*pcEnd1 == *s2Tracker && inSubstring == 0)
-        {
-            inSubstring = 1;
-            s2Tracker++;
-        }
-        else if (*pcEnd1 == *s2Tracker && inSubstring == 1) 
+        s2Tracker = s2;
+        while (*s2Tracker != '\0' && s2Tracker == (pcEnd1 + (s2Tracker - s2)))
         {
             s2Tracker++;
         }
-        else
+        if (*s2Tracker == '\0') 
         {
-            inSubstring = 0;
-            s2Tracker = s2;
+            return pcEnd1;
         }
         pcEnd1++;
     }
